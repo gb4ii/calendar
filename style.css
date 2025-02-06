@@ -1,0 +1,130 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+#main-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #ff4081;
+}
+
+button {
+    background-color: #ff4081;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f50057;
+}
+
+.hidden {
+    display: none;
+}
+
+#timer-container, #calendar-container {
+    margin-top: 20px;
+}
+
+#timer-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4081;
+}
+
+#calendar-container {
+    margin-top: 20px;
+}
+
+#days {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.day-box {
+    padding: 20px;
+    background-color: #ff80ab;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.day-box:hover {
+    background-color: #ff4081;
+}
+
+.message {
+    display: none;
+    background-color: #fff;
+    color: #ff4081;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.day-box.locked {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+}
+
+#menu {
+    margin-top: 30px;
+}
+
+.day-box-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+}
+
+.letter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #f8e1e1, #f8d8d8);
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #ff4081;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+
+.letter.open {
+    transform: rotateX(180deg);
+}
